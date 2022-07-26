@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<!-- Base Definition -->
+	<definition name="base-definition"
+		template="/WEB-INF/views/tiles/layouts/defaultLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/tiles/template/defaultHeader.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/tiles/template/defaultMenu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/tiles/template/defaultFooter.jsp" />
+	</definition> 
+
+		<definition name="base-definition_login_logout"
+		template="/WEB-INF/views/tiles/layouts/loginLogoutLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name="base-definition_map_layout"
+		template="/WEB-INF/views/tiles/layouts/mapLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name="login" extends="base-definition_login_logout">
+		<put-attribute name="title" value="login" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/login.jsp" />
+	</definition>
+	
+	<definition name="error" extends="base-definition_login_logout">
+		<put-attribute name="title" value="error" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/login.jsp" />
+	</definition>
+	
+	<definition name="version" extends="base-definition">
+		<put-attribute name="title" value="version" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/version.jsp" />
+	</definition>
+	
+	<definition name="createGroup" extends="base-definition">
+		<put-attribute name="title" value="createGroup" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/createGroup.jsp" />
+	</definition>
+	
+	<definition name="addThreat" extends="base-definition">
+		<put-attribute name="title" value="addThreat" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/addThreat.jsp" />
+	</definition>
+	
+	<definition name="contrabandSmuggle" extends="base-definition">
+		<put-attribute name="title" value="contrabandSmuggle" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/contrabandSmuggle.jsp" />
+	</definition>
+	
+	<definition name="updateContraband" extends="base-definition">
+		<put-attribute name="title" value="updateContraband" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/updateContraband.jsp" />
+	</definition>
+	
+	<definition name="updateCounter" extends="base-definition">
+		<put-attribute name="title" value="updateCounter" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/updateCounter.jsp" />
+	</definition>
+	
+	<definition name="counterTerrorism" extends="base-definition">
+		<put-attribute name="title" value="counterTerrorism" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/counterTerrorism.jsp" />
+	</definition>
+	
+	<definition name="humanTrafficking" extends="base-definition">
+		<put-attribute name="title" value="humanTrafficking" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/humanTrafficking.jsp" />
+	</definition>
+	
+	
+	<definition name="updateHumntrafficking" extends="base-definition">
+		<put-attribute name="title" value="updatehumanTrafficking" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/updateHumntrafficking.jsp" />
+	</definition>
+	<definition name="narcotics" extends="base-definition">
+		<put-attribute name="title" value="narcotics" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/narcotics.jsp" />
+	</definition>
+	
+	<definition name="updateNarcotic" extends="base-definition">
+		<put-attribute name="title" value="updateNarcotic" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/updateNarcotic.jsp" />
+	</definition>
+	
+	<!-- below for success and error page -->
+	<definition name="successSubmission" extends="base-definition">
+		<put-attribute name="title" value="successSubmission" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/successSubmission.jsp" />
+	</definition>
+	
+	<definition name="errorSubmission" extends="base-definition">
+		<put-attribute name="title" value="errorSubmission" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/errorSubmission.jsp" />
+	</definition>
+
+<definition name="satelliteInterception" extends="base-definition">
+		<put-attribute name="title" value="satelliteInterception" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/satelliteInterception.jsp" />
+	</definition>
+	
+	<definition name="updatesatelliteInterception" extends="base-definition">
+		<put-attribute name="title" value="updatesatelliteInterception" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/updatesatelliteInterception.jsp" />
+	</definition>
+	
+	
+	<definition name="otherThreat" extends="base-definition">
+		<put-attribute name="title" value="otherThreat" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/otherThreat.jsp" />
+	</definition>
+	
+	
+	<definition name="updateOtherThreat" extends="base-definition">
+		<put-attribute name="title" value="updateOtherThreat" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/updateOtherThreat.jsp" />
+	</definition>
+
+
+		<!--   Rajkumar--> 
+<definition name="search" extends="base-definition">
+		<put-attribute name="title" value="search" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/search.jsp" />
+	</definition> 
+	<definition name="view" extends="base-definition">
+		<put-attribute name="title" value="view" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/view.jsp" />
+	</definition> 
+	<definition name="threatHistory" extends="base-definition">
+		<put-attribute name="title" value="threatHistory" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/threatHistory.jsp" />
+	</definition> 
+	
+	<!--   /Rajkumar--> 
+		<definition name="viewdocument" extends="base-definition">
+		<put-attribute name="title" value="viewdocument" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/viewdocument.jsp" />
+	</definition>
+	
+	<!-- below for maps -->
+	
+	<definition name="viewMap" extends="base-definition_map_layout">
+		<put-attribute name="title" value="viewMap" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/viewMap.jsp" />
+	</definition>	
+	
+	<definition name="viewMapSingle" extends="base-definition_map_layout">
+		<put-attribute name="title" value="viewMapSingle" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/viewMapSingle.jsp" />
+	</definition>	
+	
+	
+</tiles-definitions>

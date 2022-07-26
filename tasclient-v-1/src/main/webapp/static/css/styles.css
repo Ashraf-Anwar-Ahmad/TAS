@@ -1,0 +1,43 @@
+
+/* Application Grid Design */
+
+.application_grid {
+    display: table;
+    width: 100%;
+}
+.application_grid ul {
+    padding: 0;
+}
+.application_grid ul li {
+    list-style: none;
+    float: left;
+    width: 18.25%;
+    margin: 12px; text-align: center;
+    vertical-align: middle;
+}
+.application_grid ul li a {
+	background:#fff;
+	max-width: 100%;
+	display: block;
+	text-align: center;
+	min-height: 153px;
+	text-align: center;
+	padding: 23px 10px 10px;
+	line-height: 22px;
+	font-size: 17px;
+	color: #06284c;
+	box-shadow: 0 0 11px 0px #EAEAEA;
+	-webkit-box-shadow: 0 0 11px 0px #EAEAEA;
+	-ms-box-shadow: 0 0 11px 0px #EAEAEA;
+	-o-box-shadow: 0 0 11px 0px #EAEAEA;
+	border-bottom: 2px solid #f2c63f1a;
+}
+
+.application_grid ul li a:hover { text-decoration:none; transform: scale(1.11); -webkit-transform: scale(1.11); -ms-transform: scale(1.11); -o-transform: scale(1.11); transition:all ease-in-out 0.3s; -webkit-transition:all ease-in-out 0.3s; -ms-transition:all ease-in-out 0.3s; -o-transition:all ease-in-out 0.3s; background: #fffef4;}
+
+
+.application_grid ul li a img {
+    display: inline-block;
+    width: 57px; margin-bottom: 10px;
+}
+.application_grid ul li span{ display:block;}
