@@ -384,6 +384,7 @@
 
 
 
+
 									<!--single form panel-->
 									<div class="multisteps-form__panel shadow p-4 rounded bg-white"
 										data-animation="scaleIn">
@@ -392,83 +393,57 @@
 										<div class="multisteps-form__content">
 											<!--Satellite Interception details form start-->
 											<div class="row">
-												<div class="col-md-4">
-													<div class="form-group">
-														<label>Latitude</label> <input type="text"
-															class="form-control satelDtl" name="satLattitude"
-															id="satLattitude" />
-													</div>
-												</div>
-
-												<div class="col-md-4">
-													<div class="form-group">
-														<label>Longitude</label>
-														<!-- 2905, spelling change -->
-														<input type="text" class="form-control satelDtl"
-															name="satLongitude" id="satLongitude" />
-													</div>
-												</div>
-
-
 
 												<div class="col-md-4">
 													<div class="form-group">
 														<label>Time of Activation</label> <input type="text"
 															class="form-control satelDtl" name="satActTime" readonly
-															id="satActTime" />
+															style="background-color: #ffff" id="satActTime" />
 													</div>
+												</div>
+												<div class="col-md-4">
+													<div class="form-group">
+														<label>Distance</label> <input type="number"
+															class="form-control satelDtl" onkeydown="return true"
+															name="satDistance" id="satDistance" min="0" step="any" />
+													</div>
+												</div>
+												<div class="col-md-4">
+													<div class="form-group">
+														<label>Distance Unit</label> <select
+															class="form-control select2 satelDtl" name="satDisType"
+															id="satDisType">
+															<option value="">Select</option>
+															<c:forEach items="${distanceTypeList}" var="disListItem">
+																<option value="${disListItem.id}">${disListItem.name}</option>
+															</c:forEach>
+														</select>
+													</div>
+
 												</div>
 
 												<div class="col-md-4">
-													<div class="row">
-														<!-- 2905, add (In Number) -->
-														<div class="col-md-6">
-															<div class="form-group">
-																<label>Distance</label> <input type="number"
-																	class="form-control satelDtl" onkeydown="return true"
-																	name="satDistance" id="satDistance" min="0" step="any" />
-															</div>
-														</div>
-														<div class="col-md-6">
-															<div class="form-group">
-																<label>Distance Unit</label> <select
-																	class="form-control select2 satelDtl" name="satDisType"
-																	id="satDisType">
-																	<option value="">Select</option>
-																	<c:forEach items="${distanceTypeList}"
-																		var="disListItem">
-																		<option value="${disListItem.id}">${disListItem.name}</option>
-																	</c:forEach>
-																</select>
-															</div>
-														</div>
+													<div class="form-group">
+														<label>Place</label> <input type="text"
+															class="form-control satelDtl" name="satPlace"
+															id="satPlace" />
 													</div>
 												</div>
-
-
 												<div class="col-md-4">
-													<div class="row">
-														<!-- 2905, add (In Number) -->
-														<div class="col-md-6">
-															<div class="form-group">
-																<label>Place</label> <input type="text"
-																	class="form-control satelDtl" name="satPlace"
-																	id="satPlace" />
-															</div>
-														</div>
-														<div class="col-md-6">
-															<div class="form-group">
-																<label>Place Type</label> <select
-																	class="form-control select2 satelDtl"
-																	name="satPlaceType" id="satPlaceType">
-																	<option value="">Select</option>
-																	<c:forEach items="${placeTypeList}" var="placeListItem">
-																		<option value="${placeListItem.id}">${placeListItem.name}</option>
-																	</c:forEach>
-																</select>
-															</div>
-														</div>
+
+													<!-- 2905, add (In Number) -->
+
+													<div class="form-group">
+														<label>Place Type</label> <select
+															class="form-control select2 satelDtl" name="satPlaceType"
+															id="satPlaceType">
+															<option value="">Select</option>
+															<c:forEach items="${placeTypeList}" var="placeListItem">
+																<option value="${placeListItem.id}">${placeListItem.name}</option>
+															</c:forEach>
+														</select>
 													</div>
+
 												</div>
 
 												<div class="col-md-4">
@@ -476,6 +451,56 @@
 														<label>SAT Phone</label> <input type="text"
 															class="form-control satelDtl" name="satPhone"
 															id="satPhone" />
+													</div>
+												</div>
+
+												<div class="col-12 col-md-6">
+													<div class="inner_legd">
+														<fieldset class="scheduler-border">
+															<legend class="scheduler-border">GPS Position:</legend>
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label>Latitude <small>(Decimal
+																				Degrees)</small></label> <input type="text"
+																			class="form-control allow-float" name="satLattitude"
+																			id="satLattitude" />
+																	</div>
+																	<div class="form-group">
+																		<label>Latitude <small>(Deg, Min, Sec)</small></label>
+																		<input type="text" class="form-control"
+																			name="satLattitudeDeg" id="satLattitudeDeg" readonly
+																			style="background-color: #ffff" />
+																	</div>
+
+																</div>
+
+																<div class="col-md-6 mpdw">
+																	<div class="form-group">
+																		<label>Longitude <small>(Decimal
+																				Degrees)</small></label> <input type="text"
+																			class="form-control allow-float" name="satLongitude"
+																			id="satLongitude" />
+																	</div>
+																	<div class="form-group">
+																		<label>Longitude <small>(Deg, Min,
+																				Sec)</small></label> <input type="text" class="form-control"
+																			name="satLongitudeDeg" id="satLongitudeDeg" readonly
+																			style="background-color: #ffff" />
+																	</div>
+
+																</div>
+																<div class="col-md-12">
+																	<!--1006 -->
+																	<button type="button" id="mapv"
+																		onClick="viewMapFormValidation()"
+																		class="btn btn-mp-view">
+																		<i class="fa  fa-map-marker"></i> View Map
+																	</button>
+																</div>
+																<!--1006 -->
+															</div>
+														</fieldset>
 													</div>
 												</div>
 											</div>
@@ -1635,15 +1660,6 @@ console.log(JSON.stringify(test) + " >>test");
 			'<button type="button" onclick="dataTableDeleteImei(\''+imeiDataList[i].imei+'\',this)" class="btn btn-danger btn-sm1"><i class="fa fa-remove"></i></button>'] );
 	}
 	
-/* 	for(i in boatDataList){
-		var arr_boat=test.boatStrList[i];
-		//alert("show=="+JSON.stringify(arr_boat));
-	$('#boat_table').dataTable().fnAddData( [
-		boatDataList[i].boatName,boatDataList[i].regNum,boatDataList[i].ownerName,boatDataList[i].portReg,boatDataList[i].noOfCrew,boatDataList[i].docHeld,boatDataList[i].navEqpt,boatDataList[i].commEqpt,
-		boatDataList[i].lifeEqpt,boatDataList[i].boatlpc,boatDataList[i].boatetd,boatDataList[i].boatnpc,boatDataList[i].boateta,boatDataList[i].licenseFish,boatDataList[i].ownerContDts,boatDataList[i].boatColrcd,boatDataList[i].remarks,
-		 '<button type="button" onclick="dataTableUpdateBoat(\''+arr_boat+'\',\''+boatDataList[i].boatId+'\',this)" class="btn btn-blue btn-sm1"><i class="fa fa-edit"></i></button> <button type="button" onclick="dataTableDeleteBoat(\''+arr_boat[0]+'\',\''+boatDataList[i].boatId+'\',this)" class="btn btn-danger btn-sm1"><i class="fa fa-remove"></i></button>'] );
-	
-	} */
 	for(i in boatDataList){
 		//var arr_boat=test.boatStrList[i];
 		var arr_boat =[];
@@ -1694,14 +1710,44 @@ console.log(JSON.stringify(test) + " >>test");
 	}
 	
 	for(i in vesselDataList){
-		var arr_vessel=test.vesselStrList[i];
-		// alert("show=="+JSON.stringify(arr_vessel));
+		//var arr_vessel=test.vesselStrList[i];
+		var arr_vessel=[]
+		arr_vessel.push(vesselDataList[i].vesselName);
+		arr_vessel.push(vesselDataList[i].vesselTypeId);
+		arr_vessel.push(vesselDataList[i].intCallSign);
+		arr_vessel.push(vesselDataList[i].mmsi);
+		arr_vessel.push(vesselDataList[i].imoNo);
+		arr_vessel.push(vesselDataList[i].inmarsatNo);
+		arr_vessel.push(vesselDataList[i].cargo);
+		arr_vessel.push(vesselDataList[i].vessellpc);
+		arr_vessel.push(vesselDataList[i].vesseletd);
+		arr_vessel.push(vesselDataList[i].vesselnpc);
+		arr_vessel.push(vesselDataList[i].vesseleta);
+		arr_vessel.push(vesselDataList[i].totCrew);
+		arr_vessel.push(vesselDataList[i].flgPrtReg);
+		arr_vessel.push(vesselDataList[i].otherCommEqpt);
+		arr_vessel.push(vesselDataList[i].agent);
+		arr_vessel.push(vesselDataList[i].pans);
 		$('#vessel_table').dataTable().fnAddData( [
-			 arr_vessel[0],vesselDataList[i].vesselTypeName,arr_vessel[2],arr_vessel[3],arr_vessel[4],arr_vessel[5],arr_vessel[6],
-			 arr_vessel[7],arr_vessel[8],arr_vessel[9],arr_vessel[10],arr_vessel[11],arr_vessel[12],arr_vessel[13],arr_vessel[14],arr_vessel[15],
+			vesselDataList[i].vesselName,
+			vesselDataList[i].vesselTypeName,
+			vesselDataList[i].intCallSign,
+			vesselDataList[i].mmsi,
+			vesselDataList[i].imoNo,
+			vesselDataList[i].inmarsatNo,
+			vesselDataList[i].cargo,
+			vesselDataList[i].vessellpc,
+			vesselDataList[i].vesseletd,
+			vesselDataList[i].vesselnpc,
+			vesselDataList[i].vesseleta,
+			vesselDataList[i].totCrew,
+			vesselDataList[i].flgPrtReg,
+			vesselDataList[i].otherCommEqpt,
+			vesselDataList[i].agent,
+			vesselDataList[i].pans,
 		
 		 '<button type="button" onclick="dataTableUpdateVessel(\''+arr_vessel+'\',\''+vesselDataList[i].vesselId+'\',this)" class="btn btn-blue btn-sm1"><i class="fa fa-edit"></i></button> <button type="button" onclick="dataTableDeleteVessel(\''+arr_vessel[0]+'\',\''+vesselDataList[i].vesselId+'\',this)" class="btn btn-danger btn-sm1"><i class="fa fa-remove"></i></button>'] );	
-	}  
+	} 
 	
 	for(i in crewDataList){
 		//var arr_crew=test.crewStrList[i];	
@@ -1779,11 +1825,13 @@ console.log(JSON.stringify(test) + " >>test");
 	$('#satIntercep').val(test.satIntercep);
 	$('#satLattitude').val(test.satLattitude);
 	$('#satLongitude').val(test.satLongitude);
+	$('#satLattitudeDeg').val(test.satLattitudeDeg);
+	$('#satLongitudeDeg').val(test.satLongitudeDeg);
 	$('#satActTime').val(test.satActTime);
 	$('#satDistance').val(test.satDistance);
 	$('#satDisType').val(test.satDisTypeId).trigger("change");
 	$('#satPlace').val(test.satPlace);
-	$('#satPlaceType').val(test.satPlaceType);
+	$('#satPlaceType').val(test.satPlaceTypeId);
 	$('#satPhone').val(test.satPhone);
 	
 	//below for dropdown auto-select
@@ -2436,36 +2484,34 @@ console.log(JSON.stringify(arr_vessel)+">>>arr_vessel");
 	 pnsnm,//[15]
 	'<button type="button" onclick="dataTableUpdateVessel(\''+arr_vessel+'\',\''+vslId+'\',this)" class="btn btn-blue btn-sm1"><i class="fa fa-edit"></i></button> <button type="button" onclick="dataTableDeleteVessel(\''+arr_vessel[0]+'\',\''+vslId+'\',this)" class="btn btn-danger btn-sm1"><i class="fa fa-remove"></i></button>'] );
 	var dataVessel = {};
- 
- dataVessel["vesselName"] = arr_vessel[0];
- 					dataVessel["vesselTypeName"] = arr_vessel[1];
- 					dataVessel["intCallSign"] = arr_vessel[2];
- 					dataVessel["mmsi"] = arr_vessel[3];
-					dataVessel["imoNo"] = arr_vessel[4];
- 					dataVessel["inmarsatNo"] = arr_vessel[5];
-					dataVessel["cargo"] = arr_vessel[6];
-					dataVessel["vessellpc"] = arr_vessel[7];
-					dataVessel["vesseletd"] = arr_vessel[8]; 
-					dataVessel["vesselnpc"] = arr_vessel[9];
-					dataVessel["vesseleta"] = arr_vessel[10];
-					dataVessel["totCrew"] = arr_vessel[11];
-					dataVessel["flgPrtReg"] = arr_vessel[12];
-					dataVessel["otherCommEqpt"] = arr_vessel[13];
-					dataVessel["agent"] = arr_vessel[14];
-					dataVessel["pans"] = arr_vessel[15];
-					dataVessel["vesselId"] = vslId;
-				 	vesselDataList.push(dataVessel);
- 
- $('#vesselName, #intCallSign, #mmsi, #imoNo, #cargo, #vessellpc, #vesselnpc, #totCrew, #flgPrtReg').val('');
- $('#inmarsatNo, #otherCommEqpt, #agent').val('');
- $('#vesselTypeName, #pans').val('').trigger('change');
- $('#vesseletd, #vesseleta').val('');
- $('#vesseletd, #vesseleta').datepicker('setDate', null);
- vslId='';
-				 
-				 // alert("data=="+JSON.stringify(vesselDataList));
-				 $("#sizeVessel").text((vesselDataList.length)-(vesselDelChk.length)+' records added');
-				 $(".btVessel").show();
+	 
+	dataVessel["vesselName"] = arr_vessel[0];
+	dataVessel["vesselTypeName"] = arr_vessel[1];
+	dataVessel["intCallSign"] = arr_vessel[2];
+	dataVessel["mmsi"] = arr_vessel[3];
+	dataVessel["imoNo"] = arr_vessel[4];
+	dataVessel["inmarsatNo"] = arr_vessel[5];
+	dataVessel["cargo"] = arr_vessel[6];
+	dataVessel["vessellpc"] = arr_vessel[7];
+	dataVessel["vesseletd"] = arr_vessel[8]; 
+	dataVessel["vesselnpc"] = arr_vessel[9];
+	dataVessel["vesseleta"] = arr_vessel[10];
+	dataVessel["totCrew"] = arr_vessel[11];
+	dataVessel["flgPrtReg"] = arr_vessel[12];
+	dataVessel["otherCommEqpt"] = arr_vessel[13];
+	dataVessel["agent"] = arr_vessel[14];
+	dataVessel["pans"] = arr_vessel[15];
+	dataVessel["vesselId"] = vslId;
+	vesselDataList.push(dataVessel);
+
+$('#vesselName, #intCallSign, #mmsi, #imoNo, #cargo, #vessellpc, #vesselnpc, #totCrew, #flgPrtReg').val('');
+$('#inmarsatNo, #otherCommEqpt, #agent').val('');
+$('#vesselTypeName, #pans').val('').trigger('change');
+$('#vesseletd, #vesseleta').val('');
+$('#vesseletd, #vesseleta').datepicker('setDate', null);
+vslId='';
+$("#sizeVessel").text((vesselDataList.length)-(vesselDelChk.length)+' records added');
+$(".btVessel").show();
 
 }
 else{
@@ -2485,21 +2531,14 @@ Ok: function () {
 }
 }
 function dataTableUpdateVessel(vslArr,text2,obj)
-{
-	
-	console.log(JSON.stringify(vslArr)+">>vslArr");
+{	//console.log(JSON.stringify(vslArr)+">>vslArr");
 	vslUpd=1;
-	$('#addVesselButton').hide();
+		$('#addVesselButton').hide();
 		$('#updateVesselButton').show();
-		if(text2!='' && text2!=null){
-			var chnCrId=text2.split('-');
-			vslId=chnCrId[0];
-		}
+		if(text2!='' && text2!=null){var chnCrId=text2.split('-');vslId=chnCrId[0];}
 		$('#vesselEye').attr('disabled',true);
 		var vslArray = vslArr.split(",");
-		// alert("ch=="+vslArray[1]);
 		vesselDataList = $.grep(vesselDataList, function(el, idx) {return el.vesselName == vslArray[0]}, true)
-		// alert("data=="+JSON.stringify(vesselDataList));
 			$('#vesselName').val(vslArray[0]);
 			$('#vesselTypeName').val(vslArray[1]).trigger("change");
 			$('#intCallSign').val(vslArray[2]);
@@ -2516,12 +2555,8 @@ function dataTableUpdateVessel(vslArr,text2,obj)
 			$('#otherCommEqpt').val(vslArray[13]);
 			$('#agent').val(vslArray[14]);
 			$('#pans').val(vslArray[15]).trigger("change");
-
-		$('#agent').val(vslArray[16]);$('#pans').val(vslArray[17]).trigger("change");
-
-
-		$('#vess_det').modal('toggle');
-		$('#vessel_table').DataTable().row($(obj).parents('tr')).remove().draw(false);
+			$('#vess_det').modal('toggle');
+			$('#vessel_table').DataTable().row($(obj).parents('tr')).remove().draw(false);
 }
 
 function dataTableDeleteVessel(value,text2,obj)
@@ -2630,12 +2665,18 @@ function fnClickAddCrew() {
 				    
 				    
 					 $('#crew_table').dataTable().fnAddData( [
-						 arr_crew[0],arr_crew[1],arr_crew[2],arr_crew[3],arr_crew[4],
-						 arr_crew[5],crwmrt,
-						 /* arr_crew[6], */
+						 arr_crew[0],
+						 arr_crew[1],
+						 arr_crew[2],
+						 arr_crew[3],
+						 arr_crew[4],
+						 arr_crew[5],
+						 crwmrt, /* arr_crew[6], */
 						 arr_crew[7],
 						 arr_crew[8],
-						 crwrlg,crwIdType,arr_crew[11],
+						 crwrlg,
+						 crwIdType,
+						 arr_crew[11],
 						 '<button type="button" onclick="dataTableUpdateCrew(\''+arr_crew+'\',this)" class="btn btn-blue btn-sm1"><i class="fa fa-edit"></i></button> <button type="button" onclick="dataTableDeleteCrew(\''+arr_crew[0]+'\',this)" class="btn btn-danger btn-sm1"><i class="fa fa-remove"></i></button>'] );
 					
 					 var dataCrew = {};
@@ -2650,9 +2691,8 @@ function fnClickAddCrew() {
 					 dataCrew["crIdenMrks"] = arr_crew[8];
 					 dataCrew["crRelgn"] = arr_crew[9];
 					//sequence change krna hai
- 
-										 dataCrew["crDtlsIdType"] = arr_crew[10];
-										 dataCrew["crDtlsIdPf"] = arr_crew[11];    
+					 dataCrew["crDtlsIdType"] = arr_crew[10];
+					dataCrew["crDtlsIdPf"] = arr_crew[11];    
 				 crewDataList.push(dataCrew);
 				 
 				 $('#crName, #crAge, #crNationality, #crAddress,#crCountCode, #crTelNo, #crProfession, #crIdenMrks,#crDtlsIdPf').val('');
@@ -2962,19 +3002,22 @@ function submitThreatDetails(){
 	data["location"]=$('#location').val();
 	data["regionName"]=$('#regionName').val();
 	data["coastStatName"]=$('#coastStatName').val();
-	data["imeiList"]=imeiDtlsList;//3006
+	data["imeiList"]=imeiDtlsList;
 	data["contactList"]=contactDtlsList;
 	data["nameSuspects"]=$('#nameSuspects').val();
 	data["sharedWithName"]=$('#sharedWithName').val();
 	data["sharedWithOther"]=$('#sharedWithOther').val();//added last
+	data["satIntercep"]=$('#satIntercep').val();
 	data["boatList"]=boatDataList;
 	data["vesselList"]=vesselDataList;
 	data["crewList"]=crewDataList;
 	data["otherInfo"]=$('#otherInfo').val();
 	data["followUp"]=$('#followUp').val();
-	data["satIntercep"]=$('#satIntercep').val();
+	
 	data["satLattitude"] = $('#satLattitude').val();
+	data["satLattitudeDeg"] = $('#satLattitudeDeg').val();
 	data["satLongitude"] = $('#satLongitude').val();
+	data["satLongitudeDeg"] = $('#satLongitudeDeg').val();
 	data["satActTime"] = $('#satActTime').val();
 	data["satDistance"] = $('#satDistance').val();
 	data["satDisType"] = $('#satDisType').val();

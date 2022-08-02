@@ -384,21 +384,22 @@ public class SatelliteAndOtherDAOImpl implements SatelliteAndOtherDAO {
 			while (rset.next()) {			
 				threat.setSatLattitude(rset.getString(16));
 				threat.setSatLongitude(rset.getString(17));
-				//	threat.setSatLattitudeDeg(rset.getString(18));
-				//	threat.setSatLongitudeDeg(rset.getString(19));
+				threat.setSatLattitudeDeg(rset.getString(18));
+				threat.setSatLongitudeDeg(rset.getString(19));
 				threat.setSatActTime(rset.getString(23));
 				threat.setSatDistance(rset.getString(24));
 				
 				
 				//changed on 07222022
-				//threat.setSatDisTypeId(rset.getString(25));
-				threat.setSatDisType(rset.getString(25));
-				threat.setSatPlace(rset.getString(26));
-				//threat.setSatPlaceTypeId(rset.getString(27));
-				threat.setSatPlaceType(rset.getString(27));
-				
-				
-				threat.setSatPhone(rset.getString(28));
+				threat.setSatDisTypeId(rset.getString(25));
+				threat.setSatDisType(rset.getString(26));
+				threat.setSatPlace(rset.getString(27));
+				threat.setSatPlaceTypeId(rset.getString(28));
+				threat.setSatPlaceType(rset.getString(29));
+				threat.setSatPhone(rset.getString(30));
+				System.out.println("24 "+rset.getString(24));
+
+		
 				//System.out.println("27 "+rset.getString(27));
 			}
 
@@ -446,7 +447,13 @@ public class SatelliteAndOtherDAOImpl implements SatelliteAndOtherDAO {
 					sharedWithNameLst.add(str);
 				}
 			}
+			//FOR REMOVING OTHERS FROM ARRAYLIST
+			if(sharedWithNameLst.contains("0008")) {
+				int position = sharedWithNameLst.indexOf("0008");
+				sharedWithNameLst.remove(position);
+			}
 			threat.setSharedWithName(sharedWithNameLst);
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -837,7 +844,7 @@ public class SatelliteAndOtherDAOImpl implements SatelliteAndOtherDAO {
 						{ 
 								cnt.getVesselId(), 
 								cnt.getVesselName(), 
-								cnt.getVesselTypeName(),
+								cnt.getVesselTypeId(),
 								cnt.getIntCallSign(), 
 								cnt.getMmsi(), 
 								cnt.getImoNo(), 
@@ -1376,7 +1383,7 @@ public class SatelliteAndOtherDAOImpl implements SatelliteAndOtherDAO {
 						{ 
 								cnt.getVesselId(), 
 								cnt.getVesselName(), 
-								cnt.getVesselTypeName(),
+								cnt.getVesselTypeId(),
 								cnt.getIntCallSign(), 
 								cnt.getMmsi(), 
 								cnt.getImoNo(), 

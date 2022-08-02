@@ -35,7 +35,9 @@ public class PDFBuilder extends AbstractITextPdfView {
 			HttpServletRequest request, HttpServletResponse response) throws Exception {
 
 		ViewPDFBean threatData = (ViewPDFBean) model.get("threatData");
-//"0001","Satellite interception","0002","Counter terrorism","0003","Narcotics smuggling","0004","Contraband smuggling","0005","Human trafficking","0006","Others"		
+		// "0001","Satellite interception","0002","Counter terrorism","0003","Narcotics
+		// smuggling","0004","Contraband smuggling","0005","Human
+		// trafficking","0006","Others"
 
 		String threatId = threatData.getThreatTypeId();
 		switch (threatId) {
@@ -493,7 +495,7 @@ public class PDFBuilder extends AbstractITextPdfView {
 			doc.add(table);
 		}
 		// ........................../Boat Details ......................
-//..........................Vessel details......................
+		// ..........................Vessel details......................
 
 		List<Vessel> vesselList = threatData.getVesselList();
 		if (vesselList != null && !vesselList.isEmpty()) {
@@ -553,7 +555,7 @@ public class PDFBuilder extends AbstractITextPdfView {
 		}
 		// ........................../Vessel details. ......................
 
-//..........................Passengers Details......................
+		// ..........................Passengers Details......................
 
 		doc.add(new Paragraph("Passengers Details", subHeading));
 		PdfPTable table = new PdfPTable(10);
@@ -618,7 +620,7 @@ public class PDFBuilder extends AbstractITextPdfView {
 
 		return doc;
 	}
-//....................... /Human Trafficking Form Pdf........................
+	// ....................... /Human Trafficking Form Pdf........................
 
 	// ....................... Counter Terrorism Form Pdf........................
 	Document getCounterTerrorismFormPdf(Document doc, ViewPDFBean threatData) throws Exception {
@@ -1046,7 +1048,7 @@ public class PDFBuilder extends AbstractITextPdfView {
 
 			// define font for table header row
 
-//	    Font font = FontFactory.getFont(FontFactory.HELVETICA);
+			// Font font = FontFactory.getFont(FontFactory.HELVETICA);
 			// font.setColor(BaseColor.BLACK);
 			// define table header cell
 			PdfPCell cellBoat = new PdfPCell();
@@ -1105,7 +1107,7 @@ public class PDFBuilder extends AbstractITextPdfView {
 
 			// define font for table header row
 
-//	    Font font = FontFactory.getFont(FontFactory.HELVETICA);
+			// Font font = FontFactory.getFont(FontFactory.HELVETICA);
 			// font.setColor(BaseColor.BLACK);
 			// define table header cell
 			PdfPCell cellBoat = new PdfPCell();
@@ -1160,8 +1162,8 @@ public class PDFBuilder extends AbstractITextPdfView {
 
 		// define font for table header row
 
-//	    Font font = FontFactory.getFont(FontFactory.HELVETICA);
-//	    font.setColor(BaseColor.BLACK);
+		// Font font = FontFactory.getFont(FontFactory.HELVETICA);
+		// font.setColor(BaseColor.BLACK);
 		// define table header cell
 		PdfPCell cellCrew = new PdfPCell();
 		cellCrew.setBackgroundColor(BaseColor.WHITE);
@@ -1368,7 +1370,7 @@ public class PDFBuilder extends AbstractITextPdfView {
 
 			// define font for table header row
 
-//	    Font font = FontFactory.getFont(FontFactory.HELVETICA);
+			// Font font = FontFactory.getFont(FontFactory.HELVETICA);
 			// font.setColor(BaseColor.BLACK);
 			// define table header cell
 			PdfPCell cellBoat = new PdfPCell();
@@ -1427,7 +1429,7 @@ public class PDFBuilder extends AbstractITextPdfView {
 
 			// define font for table header row
 
-//	    Font font = FontFactory.getFont(FontFactory.HELVETICA);
+			// Font font = FontFactory.getFont(FontFactory.HELVETICA);
 			// font.setColor(BaseColor.BLACK);
 			// define table header cell
 			PdfPCell cellBoat = new PdfPCell();
@@ -1482,7 +1484,7 @@ public class PDFBuilder extends AbstractITextPdfView {
 
 		// define font for table header row
 
-//	    Font font = FontFactory.getFont(FontFactory.HELVETICA);
+		// Font font = FontFactory.getFont(FontFactory.HELVETICA);
 		// font.setColor(BaseColor.BLACK);
 		// define table header cell
 		PdfPCell cellCrew = new PdfPCell();

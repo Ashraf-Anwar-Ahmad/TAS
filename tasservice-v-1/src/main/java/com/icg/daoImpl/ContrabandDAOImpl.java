@@ -78,6 +78,9 @@ public class ContrabandDAOImpl implements ContrabandDAO {
 					threat.getSharedWithName().toArray());
 			callableStatement.setArray(21, arraySharedWithName);
 
+			System.out.println("==================================add");
+			System.out.println(arraySharedWithName);
+			System.out.println("==================================add");
 			//ICG UNITS ARRAY
 			Array array_to_pass = ((OracleConnection) con).createOracleArray("TAS.UNITS_INV",
 					threat.getIcgUnitsName().toArray());
@@ -439,14 +442,23 @@ public class ContrabandDAOImpl implements ContrabandDAO {
 
 			rset = null;
 			rset = (ResultSet) callableStatement.getObject(14);
+			
+			//GET SHARED WITH 
 			ArrayList<String> sharedWithNameLst = new ArrayList<String>();
 			while (rset.next()) {
 				String str = rset.getString(1);
 				if (str != null && !str.isEmpty()) {
-					sharedWithNameLst.add(str);
+					sharedWithNameLst.add(str);				
 				}
 			}
+			//FOR REMOVING OTHERS FROM ARRAYLIST
+			if(sharedWithNameLst.contains("0008")) {
+				int position = sharedWithNameLst.indexOf("0008");
+				sharedWithNameLst.remove(position);
+			}
 			threat.setSharedWithName(sharedWithNameLst);
+			
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -502,6 +514,12 @@ public class ContrabandDAOImpl implements ContrabandDAO {
 			Array arraySharedWithName = ((OracleConnection) con).createOracleArray("TAS.SHARED_WITH",
 					threat.getSharedWithName().toArray());
 			callableStatement.setArray(21, arraySharedWithName);
+			
+
+			System.out.println("==================================update");
+			System.out.println(threat.getSharedWithName());
+			System.out.println("==================================update");
+			
 			Array array_to_pass = ((OracleConnection) con).createOracleArray("TAS.UNITS_INV",
 					threat.getIcgUnitsName().toArray());
 			callableStatement.setArray(22, array_to_pass);
@@ -587,7 +605,7 @@ public class ContrabandDAOImpl implements ContrabandDAO {
 						{ 
 								cnt.getVesselId(), 
 								cnt.getVesselName(), 
-								cnt.getVesselTypeName(),
+								cnt.getVesselTypeId(),
 								cnt.getIntCallSign(), 
 								cnt.getMmsi(), 
 								cnt.getImoNo(), 
@@ -1441,6 +1459,11 @@ public class ContrabandDAOImpl implements ContrabandDAO {
 					sharedWithNameLst.add(str);
 				}
 			}
+			//FOR REMOVING OTHERS FROM ARRAYLIST
+			if(sharedWithNameLst.contains("0008")) {
+				int position = sharedWithNameLst.indexOf("0008");
+				sharedWithNameLst.remove(position);
+			}
 			threat.setSharedWithName(sharedWithNameLst);
 
 			
@@ -1620,7 +1643,7 @@ public class ContrabandDAOImpl implements ContrabandDAO {
 						{ 
 								cnt.getVesselId(), 
 								cnt.getVesselName(), 
-								cnt.getVesselTypeName(),
+								cnt.getVesselTypeId(),
 								cnt.getIntCallSign(), 
 								cnt.getMmsi(), 
 								cnt.getImoNo(), 
@@ -2124,14 +2147,17 @@ public class ContrabandDAOImpl implements ContrabandDAO {
 			rset = null;
 			rset = (ResultSet) callableStatement.getObject(4);
 			while (rset.next()) {
-				threat.setCaseHandedTo(rset.getString(8));
-				threat.setJointOperWith(rset.getString(10));
-				threat.setNoOfpassesnger(rset.getString(11));
-				threat.setInvestigationAgency(rset.getString(12));
-				threat.setApplattitudeDec(rset.getString(13));
-				threat.setApplongitudeDec(rset.getString(14));
-				threat.setApplattitudeDeg(rset.getString(15));
-				threat.setApplongitudeDeg(rset.getString(16));
+				threat.setCaseHandedTo(rset.getString(9));
+				threat.setJointOperWith(rset.getString(11));
+				threat.setNoOfpassesnger(rset.getString(14));
+				threat.setInvestigationAgency(rset.getString(15));
+				threat.setApplattitudeDec(rset.getString(16));
+				threat.setApplongitudeDec(rset.getString(17));
+				threat.setApplattitudeDeg(rset.getString(18));
+				threat.setApplongitudeDeg(rset.getString(19));
+				System.out.println("15 "+rset.getString(15));
+
+				
 			}
 			
 			//GET BOAT AARAY
@@ -2189,6 +2215,11 @@ public class ContrabandDAOImpl implements ContrabandDAO {
 				if (str != null && !str.isEmpty()) {
 					sharedWithNameLst.add(str);
 				}
+			}
+			//FOR REMOVING OTHERS FROM ARRAYLIST
+			if(sharedWithNameLst.contains("0008")) {
+				int position = sharedWithNameLst.indexOf("0008");
+				sharedWithNameLst.remove(position);
 			}
 			threat.setSharedWithName(sharedWithNameLst);
 
@@ -2332,7 +2363,7 @@ public class ContrabandDAOImpl implements ContrabandDAO {
 						{ 
 								cnt.getVesselId(), 
 								cnt.getVesselName(), 
-								cnt.getVesselTypeName(),
+								cnt.getVesselTypeId(),
 								cnt.getIntCallSign(), 
 								cnt.getMmsi(), 
 								cnt.getImoNo(), 

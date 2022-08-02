@@ -57,8 +57,7 @@
 										title="Boat/Vessels Details" disabled="disabled">Boat/Vessels
 										Details</button>
 									<button class="multisteps-form__progress-btn" type="button"
-										title="Passenger Details" disabled="disabled">Passenger
-										Details</button>
+										title="Crew Details" disabled="disabled">Crew Details</button>
 									<button class="multisteps-form__progress-btn" type="button"
 										title="Other Information" disabled="disabled">Other
 										Information</button>
@@ -306,7 +305,7 @@
 														<div class="btImei" style="display: none">
 															<!-- <span class="badge badge-success" id="sizeImei"></span> -->
 														</div>
-														
+
 														<div class="btImei" style="display: none">
 															<span class="badge badge-success" id="sizeImei"></span>
 														</div>
@@ -902,7 +901,7 @@
 									<!--single form panel-->
 									<div class="multisteps-form__panel shadow p-4 rounded bg-white"
 										data-animation="scaleIn">
-										<h3 class="multisteps-form__title">Passengers Details</h3>
+										<h3 class="multisteps-form__title">Crew Details</h3>
 										<div class="multisteps-form__content">
 
 											<!--Crew details input start-->
@@ -1658,19 +1657,10 @@ console.log(JSON.stringify(test) + " >>test");
 	for(i in imeiDataList){
 		$('#imei_tab').dataTable().fnAddData( [
 			imeiDataList[i].imei,
-			'<button type="button" onclick="dataTableUpdateImei(\''+imeiDataList[i].imei+'\',this)" class="btn btn-blue btn-sm1"><i class="fa fa-edit"></i></button>',
-			'<button type="button" onclick="dataTableDeleteImei(\''+imeiDataList[i].imei+'\',this)" class="btn btn-danger btn-sm1"><i class="fa fa-remove"></i></button>'] );
+			'<button type="button" onclick="dataTableUpdateImei(\''+imeiDataList[i].imei+'\',\''+imeiDataList[i].imeiId+'\',this)" class="btn btn-blue btn-sm1"><i class="fa fa-edit"></i></button>',
+			'<button type="button" onclick="dataTableDeleteImei(\''+imeiDataList[i].imei+'\',\''+imeiDataList[i].imeiId+'\',this)" class="btn btn-danger btn-sm1"><i class="fa fa-remove"></i></button>'] );
 	}
 	
-/* 	for(i in boatDataList){
-		var arr_boat=test.boatStrList[i];
-		//alert("show=="+JSON.stringify(arr_boat));
-	$('#boat_table').dataTable().fnAddData( [
-		boatDataList[i].boatName,boatDataList[i].regNum,boatDataList[i].ownerName,boatDataList[i].portReg,boatDataList[i].noOfCrew,boatDataList[i].docHeld,boatDataList[i].navEqpt,boatDataList[i].commEqpt,
-		boatDataList[i].lifeEqpt,boatDataList[i].boatlpc,boatDataList[i].boatetd,boatDataList[i].boatnpc,boatDataList[i].boateta,boatDataList[i].licenseFish,boatDataList[i].ownerContDts,boatDataList[i].boatColrcd,boatDataList[i].remarks,
-		 '<button type="button" onclick="dataTableUpdateBoat(\''+arr_boat+'\',\''+boatDataList[i].boatId+'\',this)" class="btn btn-blue btn-sm1"><i class="fa fa-edit"></i></button> <button type="button" onclick="dataTableDeleteBoat(\''+arr_boat[0]+'\',\''+boatDataList[i].boatId+'\',this)" class="btn btn-danger btn-sm1"><i class="fa fa-remove"></i></button>'] );
-	
-	} */
 	for(i in boatDataList){
 		//var arr_boat=test.boatStrList[i];
 		var arr_boat =[];
@@ -1720,11 +1710,42 @@ console.log(JSON.stringify(test) + " >>test");
 	
 	}
 	for(i in vesselDataList){
-		var arr_vessel=test.vesselStrList[i];
+		//var arr_vessel=test.vesselStrList[i];
 		// alert("show=="+JSON.stringify(arr_vessel));
+		var arr_vessel=[]
+		arr_vessel.push(vesselDataList[i].vesselName);
+		arr_vessel.push(vesselDataList[i].vesselTypeId);
+		arr_vessel.push(vesselDataList[i].intCallSign);
+		arr_vessel.push(vesselDataList[i].mmsi);
+		arr_vessel.push(vesselDataList[i].imoNo);
+		arr_vessel.push(vesselDataList[i].inmarsatNo);
+		arr_vessel.push(vesselDataList[i].cargo);
+		arr_vessel.push(vesselDataList[i].vessellpc);
+		arr_vessel.push(vesselDataList[i].vesseletd);
+		arr_vessel.push(vesselDataList[i].vesselnpc);
+		arr_vessel.push(vesselDataList[i].vesseleta);
+		arr_vessel.push(vesselDataList[i].totCrew);
+		arr_vessel.push(vesselDataList[i].flgPrtReg);
+		arr_vessel.push(vesselDataList[i].otherCommEqpt);
+		arr_vessel.push(vesselDataList[i].agent);
+		arr_vessel.push(vesselDataList[i].pans);
 		$('#vessel_table').dataTable().fnAddData( [
-			 arr_vessel[0],vesselDataList[i].vesselTypeName,arr_vessel[2],arr_vessel[3],arr_vessel[4],arr_vessel[5],arr_vessel[6],
-			 arr_vessel[7],arr_vessel[8],arr_vessel[9],arr_vessel[10],arr_vessel[11],arr_vessel[12],arr_vessel[13],arr_vessel[14],arr_vessel[15],
+			vesselDataList[i].vesselName,
+			vesselDataList[i].vesselTypeName,
+			vesselDataList[i].intCallSign,
+			vesselDataList[i].mmsi,
+			vesselDataList[i].imoNo,
+			vesselDataList[i].inmarsatNo,
+			vesselDataList[i].cargo,
+			vesselDataList[i].vessellpc,
+			vesselDataList[i].vesseletd,
+			vesselDataList[i].vesselnpc,
+			vesselDataList[i].vesseleta,
+			vesselDataList[i].totCrew,
+			vesselDataList[i].flgPrtReg,
+			vesselDataList[i].otherCommEqpt,
+			vesselDataList[i].agent,
+			vesselDataList[i].pans,
 		
 		 '<button type="button" onclick="dataTableUpdateVessel(\''+arr_vessel+'\',\''+vesselDataList[i].vesselId+'\',this)" class="btn btn-blue btn-sm1"><i class="fa fa-edit"></i></button> <button type="button" onclick="dataTableDeleteVessel(\''+arr_vessel[0]+'\',\''+vesselDataList[i].vesselId+'\',this)" class="btn btn-danger btn-sm1"><i class="fa fa-remove"></i></button>'] );	
 	} 
@@ -2026,6 +2047,9 @@ function dataTableDeleteContact(value,text,text2,obj)
 
 //below for IMEI Number 3006
 
+var imeiId;
+var imeiDelList=[];
+var imeiDelChk=[];
 var imeiDtlsList=[];
 function fnClickAddImei() {
 		//$('#giffy').show();
@@ -2054,6 +2078,7 @@ function fnClickAddImei() {
 		else{
 		
 		var imeiNo=$('#imei').val();
+		imeiId==null || imeiId=='' ? imeiId='' : imeiId=imeiId+'-U';
 		if(imeiNo!=''){
 			 if(!(/^[a-zA-Z0-9]*$/.test(imeiNo))){
 					$.confirm({
@@ -2074,18 +2099,18 @@ function fnClickAddImei() {
 				$('#updateImeiButton').hide();
 				$('.imeiShd').show();
 				imUpd=0;
-				 $('#imei_tab').dataTable().fnAddData( [
+				 $('#imei_tab').dataTable().fnAddData([
 					 imeiNo,
-						'<button type="button" onclick="dataTableUpdateImei(\''+imeiNo+'\',this)" class="btn btn-blue btn-sm1"><i class="fa fa-edit"></i></button>',
-						'<button type="button" onclick="dataTableDeleteImei(\''+imeiNo+'\',this)" class="btn btn-danger btn-sm1"><i class="fa fa-remove"></i></button>'] );
+						'<button type="button" onclick="dataTableUpdateImei(\''+imeiNo+'\',\''+imeiId+'\',this)" class="btn btn-blue btn-sm1"><i class="fa fa-edit"></i></button>',
+						'<button type="button" onclick="dataTableDeleteImei(\''+imeiNo+'\',\''+imeiId+'\',this)" class="btn btn-danger btn-sm1"><i class="fa fa-remove"></i></button>'] );
 				 var dataImei = {};
 				 dataImei["imei"] = imeiNo;
+				 dataImei["imeiId"] = imeiId;
 				 imeiDtlsList.push(dataImei);
-				 
 				 $('#imei').val('');
-				 
-				 //alert("data=="+JSON.stringify(contactDtlsList));
-				 $("#sizeImei").text(imeiDtlsList.length+' records added');
+				 imeiId='';
+				//alert("data=="+JSON.stringify(imeiDtlsList));
+				 $("#sizeImei").text((imeiDtlsList.length)-(imeiDelChk.length)+' records added');
 				 $(".btImei").show();
 			}
 		}
@@ -2105,33 +2130,55 @@ function fnClickAddImei() {
 		}
 		}
 }
-function dataTableUpdateImei(value,obj)
-{
+
+function dataTableUpdateImei(value,text2,obj){
 	$('#addImeiButton').hide();
-		$('#updateImeiButton').show();
-		imUpd=1;
-		imeiDtlsList = $.grep(imeiDtlsList, function(el, idx) {return el.imei == value}, true)
-		//alert("data=="+JSON.stringify(contactDtlsList));
-		$('#imei').val(value);
-
-
-		//$('#contact_det').modal('toggle'); 
-		$('.imeiShd').hide();
-		$('#imei_tab').DataTable().row($(obj).parents('tr')).remove().draw(false);
+	$('#updateImeiButton').show();
+	imUpd=1;
+	if(text2!='' && text2!=null){ 	
+	var chnCrId=text2.split('-');	
+	imeiId=chnCrId[0];}
+		imeiDtlsList = $.grep(
+		imeiDtlsList,
+		 function(el, idx) {
+		 return el.imei == value;
+	 },
+	 true
+	 );
+	$('#imei').val(value);
+	
+	$('.imeiShd').hide();	
+	$('#imei_tab')
+	.DataTable()
+	.row($(obj).parents("tr"))
+	.remove()
+	.draw(false);
 }
 
-function dataTableDeleteImei(value,obj)
+function dataTableDeleteImei(value,text2,obj)
 {
-		imeiDtlsList = $.grep(imeiDtlsList, function(el, idx) {return el.imei == value}, true)
-		//alert("data=="+JSON.stringify(contactDtlsList));
-		$('#imei_tab').DataTable().row($(obj).parents('tr')).remove().draw(false);
-		$("#sizeImei").text(imeiDtlsList.length+' records added');
-		if(imeiDtlsList.length==0){
-			$(".btImei").hide();
-		}
+//alert("check=="+text2);
+	if(text2!='' && text2!=null){
+		var dataImeiDel = {};
+		var delrcd=text2.split('-');
+		dataImeiDel["imeiId"] = delrcd[0]+'-D';
+		imeiDelList.push(dataImeiDel);
+		imeiDelChk.push(dataImeiDel);
+	}
+	imeiDtlsList = $.grep(imeiDtlsList, function(el, idx) {return el.imei == value}, true);
+	//alert("data=="+JSON.stringify(imeiDtlsList));
+	$('#imei_tab').DataTable().row($(obj).parents('tr')).remove().draw(false);
+	Array.prototype.push.apply(imeiDtlsList,imeiDelList);
+	$("#sizeImei").text((imeiDtlsList.length)-(imeiDelChk.length)+' records added');
+	imeiDelList=[];
+	if((imeiDtlsList.length)-(imeiDelChk.length)==0){
+		$(".btImei").hide();
+	}
 } 
 
 //end 3006 IMEI Button Functionality END
+
+
 //below for boat details
 
 var botId;	
@@ -2457,36 +2504,34 @@ console.log(JSON.stringify(arr_vessel)+">>>arr_vessel");
 	 pnsnm,//[15]
 	'<button type="button" onclick="dataTableUpdateVessel(\''+arr_vessel+'\',\''+vslId+'\',this)" class="btn btn-blue btn-sm1"><i class="fa fa-edit"></i></button> <button type="button" onclick="dataTableDeleteVessel(\''+arr_vessel[0]+'\',\''+vslId+'\',this)" class="btn btn-danger btn-sm1"><i class="fa fa-remove"></i></button>'] );
 	var dataVessel = {};
- 
- dataVessel["vesselName"] = arr_vessel[0];
- 					dataVessel["vesselTypeName"] = arr_vessel[1];
- 					dataVessel["intCallSign"] = arr_vessel[2];
- 					dataVessel["mmsi"] = arr_vessel[3];
-					dataVessel["imoNo"] = arr_vessel[4];
- 					dataVessel["inmarsatNo"] = arr_vessel[5];
-					dataVessel["cargo"] = arr_vessel[6];
-					dataVessel["vessellpc"] = arr_vessel[7];
-					dataVessel["vesseletd"] = arr_vessel[8]; 
-					dataVessel["vesselnpc"] = arr_vessel[9];
-					dataVessel["vesseleta"] = arr_vessel[10];
-					dataVessel["totCrew"] = arr_vessel[11];
-					dataVessel["flgPrtReg"] = arr_vessel[12];
-					dataVessel["otherCommEqpt"] = arr_vessel[13];
-					dataVessel["agent"] = arr_vessel[14];
-					dataVessel["pans"] = arr_vessel[15];
-					dataVessel["vesselId"] = vslId;
-				 	vesselDataList.push(dataVessel);
- 
- $('#vesselName, #intCallSign, #mmsi, #imoNo, #cargo, #vessellpc, #vesselnpc, #totCrew, #flgPrtReg').val('');
- $('#inmarsatNo, #otherCommEqpt, #agent').val('');
- $('#vesselTypeName, #pans').val('').trigger('change');
- $('#vesseletd, #vesseleta').val('');
- $('#vesseletd, #vesseleta').datepicker('setDate', null);
- vslId='';
-				 
-				 // alert("data=="+JSON.stringify(vesselDataList));
-				 $("#sizeVessel").text((vesselDataList.length)-(vesselDelChk.length)+' records added');
-				 $(".btVessel").show();
+	 
+	dataVessel["vesselName"] = arr_vessel[0];
+	dataVessel["vesselTypeName"] = arr_vessel[1];
+	dataVessel["intCallSign"] = arr_vessel[2];
+	dataVessel["mmsi"] = arr_vessel[3];
+	dataVessel["imoNo"] = arr_vessel[4];
+	dataVessel["inmarsatNo"] = arr_vessel[5];
+	dataVessel["cargo"] = arr_vessel[6];
+	dataVessel["vessellpc"] = arr_vessel[7];
+	dataVessel["vesseletd"] = arr_vessel[8]; 
+	dataVessel["vesselnpc"] = arr_vessel[9];
+	dataVessel["vesseleta"] = arr_vessel[10];
+	dataVessel["totCrew"] = arr_vessel[11];
+	dataVessel["flgPrtReg"] = arr_vessel[12];
+	dataVessel["otherCommEqpt"] = arr_vessel[13];
+	dataVessel["agent"] = arr_vessel[14];
+	dataVessel["pans"] = arr_vessel[15];
+	dataVessel["vesselId"] = vslId;
+	vesselDataList.push(dataVessel);
+
+$('#vesselName, #intCallSign, #mmsi, #imoNo, #cargo, #vessellpc, #vesselnpc, #totCrew, #flgPrtReg').val('');
+$('#inmarsatNo, #otherCommEqpt, #agent').val('');
+$('#vesselTypeName, #pans').val('').trigger('change');
+$('#vesseletd, #vesseleta').val('');
+$('#vesseletd, #vesseleta').datepicker('setDate', null);
+vslId='';
+$("#sizeVessel").text((vesselDataList.length)-(vesselDelChk.length)+' records added');
+$(".btVessel").show();
 
 }
 else{
@@ -2571,7 +2616,7 @@ function dataTableDeleteVessel(value,text2,obj)
 		
 			
 		
-//below for Passenger details
+//below for Crew details
 
 var crwwId;	
 var crewDelList=[];
@@ -2592,7 +2637,7 @@ function fnClickAddCrew() {
   		{
 			$.confirm({
 			    title: 'Alert!',
-			    content: 'You have already added the same Passenger Name',
+			    content: 'You have already added the same Crew Name',
 			    theme: 'material',
 			    type: 'orange',
 			    buttons: {

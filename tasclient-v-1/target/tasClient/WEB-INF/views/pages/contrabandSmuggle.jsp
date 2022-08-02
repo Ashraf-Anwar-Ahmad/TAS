@@ -2172,8 +2172,22 @@ $('#vesselTypeName option:selected').text()=='Select'?vsltnm='':vsltnm=$('#vesse
 $('#pans option:selected').text()=='Select'?pnsnm='':pnsnm=$('#pans option:selected').text();
 
  $('#vessel_table').dataTable().fnAddData( [
-	 arr_vessel[0],vsltnm,arr_vessel[2],arr_vessel[3],arr_vessel[4],arr_vessel[5],arr_vessel[6],arr_vessel[7],
-	 arr_vessel[8],arr_vessel[9],arr_vessel[10],arr_vessel[11],arr_vessel[12],arr_vessel[13],arr_vessel[14],pnsnm,
+	 arr_vessel[0],
+	 vsltnm,
+	 arr_vessel[2],
+	 arr_vessel[3],
+	 arr_vessel[4],
+	 arr_vessel[5],
+	 arr_vessel[6],
+	 arr_vessel[7],
+	 arr_vessel[8],
+	 arr_vessel[9],
+	 arr_vessel[10],
+	 arr_vessel[11],
+	 arr_vessel[12],
+	 arr_vessel[13],
+	 arr_vessel[14],
+	 pnsnm,
 	 '<button type="button" onclick="dataTableUpdateVessel(\''+arr_vessel+'\',this)" class="btn btn-blue btn-sm1"><i class="fa fa-edit"></i></button> <button type="button" onclick="dataTableDeleteVessel(\''+arr_vessel[0]+'\',this)" class="btn btn-danger btn-sm1"><i class="fa fa-remove"></i></button>'] );
  var dataVessel = {};
  
@@ -2225,12 +2239,14 @@ Ok: function () {
 			$('#addVesselButton').hide();
 			$('#updateVesselButton').show();
 			vslUpd=1;//(0206)
+			
 			$('#vesselEye').attr('disabled',true);
 			var vslArray = vslArr.split(",");
-			//alert("ch=="+vslArray[1]);
 			vesselDataList = $.grep(vesselDataList, function(el, idx) {return el.vesselName == vslArray[0]}, true)
-			$('#vesselName').val(vslArray[0]);$('#vesselTypeName').val(vslArray[1]).trigger("change");
-			$('#intCallSign').val(vslArray[2]);$('#mmsi').val(vslArray[3]);
+			$('#vesselName').val(vslArray[0]);
+			$('#vesselTypeName').val(vslArray[1]).trigger("change");
+			$('#intCallSign').val(vslArray[2]);
+			$('#mmsi').val(vslArray[3]);
 			$('#imoNo').val(vslArray[4]);
 			$('#inmarsatNo').val(vslArray[5]);
 			$('#cargo').val(vslArray[6]);
@@ -2238,8 +2254,11 @@ Ok: function () {
 			$('#vesseletd').val(vslArray[8]);
 			$('#vesselnpc').val(vslArray[9]);
 			$('#vesseleta').val(vslArray[10]);
-			$('#totCrew').val(vslArray[11]);$('#flgPrtReg').val(vslArray[12]);$('#otherCommEqpt').val(vslArray[13]);
-			$('#agent').val(vslArray[14]);$('#pans').val(vslArray[15]).trigger("change");
+			$('#totCrew').val(vslArray[11]);
+			$('#flgPrtReg').val(vslArray[12]);
+			$('#otherCommEqpt').val(vslArray[13]);
+			$('#agent').val(vslArray[14]);
+			$('#pans').val(vslArray[15]).trigger("change");
 			$('#vess_det').modal('toggle'); 
 			$('#vessel_table').DataTable().row($(obj).parents('tr')).remove().draw(false);
 	}

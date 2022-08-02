@@ -462,6 +462,11 @@ public class CounterDAOImpl implements CounterDAO {
 					sharedWithNameLst.add(str);
 				}
 			}
+			//FOR REMOVING OTHERS FROM ARRAYLIST
+			if(sharedWithNameLst.contains("0008")) {
+				int position = sharedWithNameLst.indexOf("0008");
+				sharedWithNameLst.remove(position);
+			}
 			threat.setSharedWithName(sharedWithNameLst);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -1001,7 +1006,7 @@ public class CounterDAOImpl implements CounterDAO {
 						{ 
 								cnt.getVesselId(), 
 								cnt.getVesselName(), 
-								cnt.getVesselTypeName(),
+								cnt.getVesselTypeId(),
 								cnt.getIntCallSign(), 
 								cnt.getMmsi(), 
 								cnt.getImoNo(), 

@@ -384,9 +384,8 @@
 										<h3 class="multisteps-form__title">Satellite Interception
 											Details</h3>
 										<div class="multisteps-form__content">
-
+											<!--Satellite Interception details form start-->
 											<div class="row">
-
 
 												<div class="col-md-4">
 													<div class="form-group">
@@ -403,9 +402,6 @@
 													</div>
 												</div>
 												<div class="col-md-4">
-
-													<!-- 2905, add (In Number) -->
-
 													<div class="form-group">
 														<label>Distance Unit</label> <select
 															class="form-control select2 satelDtl" name="satDisType"
@@ -1499,7 +1495,7 @@
 								<th>Type Of threat</th>
 								<th>Originator</th>
 								<th>GPS longitude</th>
-								<th>GPS lattitude</th>
+								<th>GPS latitude</th>
 								<th>IMEI No.</th>
 								<th>Country Of contacted No.</th>
 								<th>Distance From Land</th>

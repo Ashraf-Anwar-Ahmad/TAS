@@ -392,27 +392,27 @@
 														</div>
 
 
-											</div>
-										</div>
-
-									</div>
-
-
-									<div class="input_bt_area">
-										<div class="row">
-
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>Type of boat</label> <select
-														class="form-control select2 boatcl" name="typeOfBoat"
-														id="typeOfBoat">
-														<option value="">Select</option>
-														<c:forEach items="${boatTypeList}" var="boatListItem">
-															<option value="${boatListItem.id}">${boatListItem.name}</option>
-														</c:forEach>
-													</select>
+													</div>
 												</div>
+
 											</div>
+
+
+											<div class="input_bt_area">
+												<div class="row">
+
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>Type of boat</label> <select
+																class="form-control select2 boatcl" name="typeOfBoat"
+																id="typeOfBoat">
+																<option value="">Select</option>
+																<c:forEach items="${boatTypeList}" var="boatListItem">
+																	<option value="${boatListItem.id}">${boatListItem.name}</option>
+																</c:forEach>
+															</select>
+														</div>
+													</div>
 
 													<div class="col-md-3">
 														<div class="form-group">
@@ -443,22 +443,22 @@
 														</div>
 													</div>
 
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>Port of Reg.</label> <input type="text"
-														class="form-control boatcl" name="portReg" id="portReg" />
-												</div>
-											</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>Port of Reg.</label> <input type="text"
+																class="form-control boatcl" name="portReg" id="portReg" />
+														</div>
+													</div>
 
 
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>Number of Crew</label> <input type="number"
-														class="form-control boatcl allownumericwithoutdecimal"
-														onkeydown="return false" name="noOfCrew" id="noOfCrew"
-														min="1" />
-												</div>
-											</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>Number of Crew</label> <input type="number"
+																class="form-control boatcl allownumericwithoutdecimal"
+																onkeydown="return false" name="noOfCrew" id="noOfCrew"
+																min="1" />
+														</div>
+													</div>
 
 													<div class="col-md-3">
 														<div class="form-group">
@@ -489,60 +489,60 @@
 														</div>
 													</div>
 
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>LPC</label> <input type="text"
-														class="form-control boatcl" name="boatlpc" id="boatlpc" />
-												</div>
-											</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>LPC</label> <input type="text"
+																class="form-control boatcl" name="boatlpc" id="boatlpc" />
+														</div>
+													</div>
 
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>ETD</label> <input type="text"
-														class="form-control boatcl" name="boatetd" id="boatetd"
-														readonly style="background-color: #ffff" />
-												</div>
-											</div>
-
-
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>NPC</label> <input type="text"
-														class="form-control boatcl" name="boatnpc" id="boatnpc" />
-												</div>
-											</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>ETD</label> <input type="text"
+																class="form-control boatcl" name="boatetd" id="boatetd"
+																readonly style="background-color: #ffff" />
+														</div>
+													</div>
 
 
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>ETA</label> <input type="text"
-														class="form-control boatcl" name="boateta" id="boateta"
-														readonly style="background-color: #ffff" />
-												</div>
-											</div>
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>License/Permit</label> <input type="text"
-														class="form-control boatcl" name="licenseFish"
-														id="licenseFish" />
-												</div>
-											</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>NPC</label> <input type="text"
+																class="form-control boatcl" name="boatnpc" id="boatnpc" />
+														</div>
+													</div>
 
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>Country Code</label> <input type="text"
-														class="form-control boatcl allownumericwithoutdecimal"
-														name="ownerContCode" id="ownerContCode" maxlength="15" />
-												</div>
-											</div>
 
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>Owner Contact Details</label> <input type="text"
-														class="form-control boatcl allownumericwithoutdecimal"
-														name="ownerContDts" id="ownerContDts" maxlength="15" />
-												</div>
-											</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>ETA</label> <input type="text"
+																class="form-control boatcl" name="boateta" id="boateta"
+																readonly style="background-color: #ffff" />
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>License/Permit</label> <input type="text"
+																class="form-control boatcl" name="licenseFish"
+																id="licenseFish" />
+														</div>
+													</div>
+
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>Country Code</label> <input type="text"
+																class="form-control boatcl allownumericwithoutdecimal"
+																name="ownerContCode" id="ownerContCode" maxlength="15" />
+														</div>
+													</div>
+
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>Owner Contact Details</label> <input type="text"
+																class="form-control boatcl allownumericwithoutdecimal"
+																name="ownerContDts" id="ownerContDts" maxlength="15" />
+														</div>
+													</div>
 
 													<div class="col-md-3">
 														<div class="form-group">
@@ -588,126 +588,126 @@
 											<div class="input_vs_area" style="display: none;">
 												<div class="row">
 
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>Name of Vessel</label> <input type="text"
-														class="form-control vesselcl" name="vesselName"
-														id="vesselName" />
-												</div>
-											</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>Name of Vessel</label> <input type="text"
+																class="form-control vesselcl" name="vesselName"
+																id="vesselName" />
+														</div>
+													</div>
 
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>Vessel Type</label> <select
-														class="form-control select2 vesselcl"
-														name="vesselTypeName" id="vesselTypeName">
-														<option value="">Select</option>
-														<c:forEach items="${vsltpList}" var="ListItem">
-															<option value="${ListItem.id}">${ListItem.name}</option>
-														</c:forEach>
-													</select>
-												</div>
-											</div>
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>International Call Sign</label> <input type="text"
-														class="form-control vesselcl" name="intCallSign"
-														id="intCallSign" />
-												</div>
-											</div>
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>MMSI</label> <input type="text"
-														class="form-control vesselcl" name="mmsi" id="mmsi" />
-												</div>
-											</div>
-
-
-
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>IMO No.</label> <input type="text"
-														class="form-control vesselcl" name="imoNo" id="imoNo" />
-												</div>
-											</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>Vessel Type</label> <select
+																class="form-control select2 vesselcl"
+																name="vesselTypeName" id="vesselTypeName">
+																<option value="">Select</option>
+																<c:forEach items="${vsltpList}" var="ListItem">
+																	<option value="${ListItem.id}">${ListItem.name}</option>
+																</c:forEach>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>International Call Sign</label> <input type="text"
+																class="form-control vesselcl" name="intCallSign"
+																id="intCallSign" />
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>MMSI</label> <input type="text"
+																class="form-control vesselcl" name="mmsi" id="mmsi" />
+														</div>
+													</div>
 
 
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>Inmarsat No.</label> <input type="text"
-														class="form-control vesselcl" name="inmarsatNo"
-														id="inmarsatNo" />
-												</div>
-											</div>
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>Cargo</label> <input type="text"
-														class="form-control vesselcl" name="cargo" id="cargo" />
-												</div>
-											</div>
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>LPC</label> <input type="text"
-														class="form-control vesselcl" name="vessellpc"
-														id="vessellpc" />
-												</div>
-											</div>
 
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>ETD</label> <input type="text"
-														class="form-control vesselcl" name="vesseletd"
-														id="vesseletd" readonly style="background-color: #ffff" />
-												</div>
-											</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>IMO No.</label> <input type="text"
+																class="form-control vesselcl" name="imoNo" id="imoNo" />
+														</div>
+													</div>
 
 
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>NPC</label> <input type="text"
-														class="form-control vesselcl" name="vesselnpc"
-														id="vesselnpc" />
-												</div>
-											</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>Inmarsat No.</label> <input type="text"
+																class="form-control vesselcl" name="inmarsatNo"
+																id="inmarsatNo" />
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>Cargo</label> <input type="text"
+																class="form-control vesselcl" name="cargo" id="cargo" />
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>LPC</label> <input type="text"
+																class="form-control vesselcl" name="vessellpc"
+																id="vessellpc" />
+														</div>
+													</div>
 
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>ETA</label> <input type="text"
-														class="form-control vesselcl" name="vesseleta"
-														id="vesseleta" readonly style="background-color: #ffff" />
-												</div>
-											</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>ETD</label> <input type="text"
+																class="form-control vesselcl" name="vesseletd"
+																id="vesseletd" readonly style="background-color: #ffff" />
+														</div>
+													</div>
 
 
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>Total Crew</label> <input type="number"
-														class="form-control vesselcl allownumericwithoutdecimal"
-														onkeydown="return false;" name="totCrew" id="totCrew"
-														min="1" />
-												</div>
-											</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>NPC</label> <input type="text"
+																class="form-control vesselcl" name="vesselnpc"
+																id="vesselnpc" />
+														</div>
+													</div>
 
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>Flag or Port of Reg.</label> <input type="text"
-														class="form-control vesselcl" name="flgPrtReg"
-														id="flgPrtReg" />
-												</div>
-											</div>
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>Other Communication Equipment</label> <input
-														type="text" class="form-control vesselcl"
-														name="otherCommEqpt" id="otherCommEqpt" />
-												</div>
-											</div>
-											<div class="col-md-3">
-												<div class="form-group">
-													<label>Agent</label> <input type="text"
-														class="form-control vesselcl" name="agent" id="agent" />
-												</div>
-											</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>ETA</label> <input type="text"
+																class="form-control vesselcl" name="vesseleta"
+																id="vesseleta" readonly style="background-color: #ffff" />
+														</div>
+													</div>
+
+
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>Total Crew</label> <input type="number"
+																class="form-control vesselcl allownumericwithoutdecimal"
+																onkeydown="return false;" name="totCrew" id="totCrew"
+																min="1" />
+														</div>
+													</div>
+
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>Flag or Port of Reg.</label> <input type="text"
+																class="form-control vesselcl" name="flgPrtReg"
+																id="flgPrtReg" />
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>Other Communication Equipment</label> <input
+																type="text" class="form-control vesselcl"
+																name="otherCommEqpt" id="otherCommEqpt" />
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>Agent</label> <input type="text"
+																class="form-control vesselcl" name="agent" id="agent" />
+														</div>
+													</div>
 
 													<div class="col-md-3">
 														<div class="form-group">
@@ -748,55 +748,55 @@
 													</div>
 												</div>
 
+											</div>
+											<!--input_vs_area end-->
+
+
+											<!--Boat Vessel form area End-->
+
+
+											<!-- crew details area start -->
+											<div class="row">
+												<div class="button-row d-flex mt-4 col-12">
+													<button class="btn btn-secondary js-btn-prev" type="button"
+														title="Prev">Prev</button>
+													<button class="btn btn-primary2 ml-auto js-btn-next"
+														type="button" title="Next">Next</button>
+												</div>
+											</div>
+										</div>
 									</div>
-									<!--input_vs_area end-->
-
-
-									<!--Boat Vessel form area End-->
-
-
 									<!-- crew details area start -->
-									<div class="row">
-										<div class="button-row d-flex mt-4 col-12">
-											<button class="btn btn-secondary js-btn-prev" type="button"
-												title="Prev">Prev</button>
-											<button class="btn btn-primary2 ml-auto js-btn-next"
-												type="button" title="Next">Next</button>
-										</div>
-									</div>
-								</div>
-							</div>
-									<!-- crew details area start -->
-							<!--single form panel-->
-							<div class="multisteps-form__panel shadow p-4 rounded bg-white"
-								data-animation="scaleIn">
-								<h3 class="multisteps-form__title">Crew Details</h3>
-								<div class="multisteps-form__content">
+									<!--single form panel-->
+									<div class="multisteps-form__panel shadow p-4 rounded bg-white"
+										data-animation="scaleIn">
+										<h3 class="multisteps-form__title">Crew Details</h3>
+										<div class="multisteps-form__content">
 
-									<!--Crew details input start-->
-									<div class="row">
-										<div class="col-md-3">
-											<div class="form-group">
-												<label>Name</label> <input type="text"
-													class="form-control crewcl" name="crName" id="crName" />
-											</div>
-										</div>
+											<!--Crew details input start-->
+											<div class="row">
+												<div class="col-md-3">
+													<div class="form-group">
+														<label>Name</label> <input type="text"
+															class="form-control crewcl" name="crName" id="crName" />
+													</div>
+												</div>
 
-										<div class="col-md-3">
-											<div class="form-group">
-												<label>Age</label> <input type="number" min="10"
-													class="form-control crewcl allownumericwithoutdecimal"
-													id="crAge" name="crAge" onkeydown="return false;">
-											</div>
-										</div>
+												<div class="col-md-3">
+													<div class="form-group">
+														<label>Age</label> <input type="number" min="10"
+															class="form-control crewcl allownumericwithoutdecimal"
+															id="crAge" name="crAge" onkeydown="return false;">
+													</div>
+												</div>
 
-										<div class="col-md-3">
-											<div class="form-group">
-												<label>Nationality</label> <input type="text"
-													class="form-control crewcl" id="crNationality"
-													name="crNationality">
-											</div>
-										</div>
+												<div class="col-md-3">
+													<div class="form-group">
+														<label>Nationality</label> <input type="text"
+															class="form-control crewcl" id="crNationality"
+															name="crNationality">
+													</div>
+												</div>
 
 
 
@@ -810,22 +810,22 @@
 											</div>
 
 
-									<div class="row">
-										<div class="col-md-3">
-											<div class="form-group">
-												<label>Country Code</label> <input type="text"
-													class="form-control crewcl allownumericwithoutdecimal"
-													name="crCountCode" id="crCountCode" maxlength="15" />
-											</div>
-										</div>
+											<div class="row">
+												<div class="col-md-3">
+													<div class="form-group">
+														<label>Country Code</label> <input type="text"
+															class="form-control crewcl allownumericwithoutdecimal"
+															name="crCountCode" id="crCountCode" maxlength="15" />
+													</div>
+												</div>
 
-										<div class="col-md-3">
-											<div class="form-group">
-												<label>Telephone Number</label> <input type="tel"
-													class="form-control crewcl allownumericwithoutdecimal"
-													id="crTelNo" name="crTelNo" maxlength="15">
-											</div>
-										</div>
+												<div class="col-md-3">
+													<div class="form-group">
+														<label>Telephone Number</label> <input type="tel"
+															class="form-control crewcl allownumericwithoutdecimal"
+															id="crTelNo" name="crTelNo" maxlength="15">
+													</div>
+												</div>
 
 												<div class="col-md-3">
 													<div class="form-group">
@@ -840,108 +840,108 @@
 													</div>
 												</div>
 
-										<div class="col-md-3">
-											<div class="form-group">
-												<label>Profession</label> <input type="text"
-													class="form-control crewcl" id="crProfession"
-													name="crProfession" placeholder="">
+												<div class="col-md-3">
+													<div class="form-group">
+														<label>Profession</label> <input type="text"
+															class="form-control crewcl" id="crProfession"
+															name="crProfession" placeholder="">
+													</div>
+												</div>
+
+												<div class="col-md-3">
+													<div class="form-group">
+														<label>Identification Marks</label> <input type="text"
+															class="form-control crewcl" name="crIdenMrks"
+															id="crIdenMrks" />
+													</div>
+												</div>
+
+												<div class="col-md-3">
+													<div class="form-group">
+														<label>Religion</label> <select
+															class="form-control select2 crewcl" name="crRelgn"
+															id="crRelgn">
+															<option value="">Select</option>
+															<c:forEach items="${rlgnList}" var="ListItem">
+																<option value="${ListItem.id}">${ListItem.name}</option>
+															</c:forEach>
+														</select>
+													</div>
+												</div>
+
+												<div class="col-md-3">
+													<div class="form-group">
+														<label>Type of Id Proof</label> <select
+															class="form-control select2 crewcl" name="crDtlsIdType"
+															id="crDtlsIdType">
+															<option value="">Select</option>
+															<c:forEach items="${idProofList}" var="ListItem">
+																<option value="${ListItem.id}">${ListItem.name}</option>
+															</c:forEach>
+														</select>
+													</div>
+												</div>
+
+
+												<div class="col-md-3">
+													<div class="form-group">
+														<label>ID Proof Number</label> <input type="text"
+															class="form-control crewcl" name="crDtlsIdPf"
+															id="crDtlsIdPf" />
+													</div>
+												</div>
+
+
+												<div class="col-md-3">
+													<div class="form-group mt-4">
+														<button type="button" id="addCrewButton"
+															onclick="fnClickAddCrew()" class="btn btn-primary">Add</button>
+														<button type="button" style="display: none;"
+															id="updateCrewButton" onclick="fnClickAddCrew()"
+															class="btn btn-primary">Update</button>
+													</div>
+												</div>
+
+												<div class="col-md-12">
+													<div class="btCrew" style="display: none">
+														<button class="btn btn-default" id="crewEye" type="button"
+															data-toggle="modal" data-target="#crew_det">
+															<i class="fa fa-eye"></i> <span id="sizeCrew"></span>
+														</button>
+													</div>
+												</div>
 											</div>
-										</div>
-
-										<div class="col-md-3">
-											<div class="form-group">
-												<label>Identification Marks</label> <input type="text"
-													class="form-control crewcl" name="crIdenMrks"
-													id="crIdenMrks" />
-											</div>
-										</div>
-
-										<div class="col-md-3">
-											<div class="form-group">
-												<label>Religion</label> <select
-													class="form-control select2 crewcl" name="crRelgn"
-													id="crRelgn">
-													<option value="">Select</option>
-													<c:forEach items="${rlgnList}" var="ListItem">
-														<option value="${ListItem.id}">${ListItem.name}</option>
-													</c:forEach>
-												</select>
-											</div>
-										</div>
-
-										<div class="col-md-3">
-											<div class="form-group">
-												<label>Type of Id Proof</label> <select
-													class="form-control select2 crewcl" name="crDtlsIdType"
-													id="crDtlsIdType">
-													<option value="">Select</option>
-													<c:forEach items="${idProofList}" var="ListItem">
-														<option value="${ListItem.id}">${ListItem.name}</option>
-													</c:forEach>
-												</select>
-											</div>
-										</div>
 
 
-										<div class="col-md-3">
-											<div class="form-group">
-												<label>ID Proof Number</label> <input type="text"
-													class="form-control crewcl" name="crDtlsIdPf"
-													id="crDtlsIdPf" />
-											</div>
-										</div>
 
 
-										<div class="col-md-3">
-											<div class="form-group mt-4">
-												<button type="button" id="addCrewButton"
-													onclick="fnClickAddCrew()" class="btn btn-primary">Add</button>
-												<button type="button" style="display: none;"
-													id="updateCrewButton" onclick="fnClickAddCrew()"
-													class="btn btn-primary">Update</button>
-											</div>
-										</div>
+											<!--Crew details input End-->
 
-										<div class="col-md-12">
-											<div class="btCrew" style="display: none">
-												<button class="btn btn-default" id="crewEye" type="button"
-													data-toggle="modal" data-target="#crew_det">
-													<i class="fa fa-eye"></i> <span id="sizeCrew"></span>
-												</button>
+											<div class="button-row d-flex mt-4">
+												<button class="btn btn-secondary js-btn-prev" type="button"
+													title="Prev">Prev</button>
+												<button class="btn btn-primary2 ml-auto js-btn-next"
+													type="button" title="Next">Next</button>
 											</div>
 										</div>
 									</div>
 
 
+									<!--single form panel-->
+									<div class="multisteps-form__panel shadow p-4 rounded bg-white"
+										data-animation="scaleIn">
+										<h3 class="multisteps-form__title">Other Information</h3>
+										<div class="multisteps-form__content">
 
-
-									<!--Crew details input End-->
-
-									<div class="button-row d-flex mt-4">
-										<button class="btn btn-secondary js-btn-prev" type="button"
-											title="Prev">Prev</button>
-										<button class="btn btn-primary2 ml-auto js-btn-next"
-											type="button" title="Next">Next</button>
-									</div>
-								</div>
-							</div>
-
-
-							<!--single form panel-->
-							<div class="multisteps-form__panel shadow p-4 rounded bg-white"
-								data-animation="scaleIn">
-								<h3 class="multisteps-form__title">Other Information</h3>
-								<div class="multisteps-form__content">
-
-									<!--Crew details input start-->
-									<div class="row">
-										<div class="col-md-6">
-											<div class="form-group">
-												<label>Other Information</label>
-												<textarea class="form-control" id="otherInfo"
-													name="otherInfo" placeholder="Other Information"></textarea>
-											</div>
-										</div>
+											<!--Crew details input start-->
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Other Information</label>
+														<textarea class="form-control" id="otherInfo"
+															name="otherInfo" placeholder="Other Information"></textarea>
+													</div>
+												</div>
 
 												<div class="col-md-6">
 													<div class="form-group">
@@ -952,10 +952,10 @@
 												</div>
 
 
-									</div>
+											</div>
 
 
-									<!-- <div class="row">
+											<!-- <div class="row">
 			<div class="col-md-6">
 				<div class="form-group">
 					<label>Upload Documents</label>
@@ -978,8 +978,8 @@
 			
 			-->
 
-									<!-- Code added by Rakesh to upload multiple file     start -->
-									<!--   <div class="row files" id="files1">
+											<!-- Code added by Rakesh to upload multiple file     start -->
+											<!--   <div class="row files" id="files1">
                 <h4>Files </h4>
                 <span class="btn btn-default btn-file">Browse
                    <input type="file" name="files1" multiple />
@@ -988,12 +988,12 @@
                 <ul class="fileList"></ul>
             </div> -->
 
-									<div class="row files fileupdt" id="files1">
-										<div class="col-md-12">
-											<label><b>Select Files to upload</b></label><br /> <span
-												class="btn btn-default btn-file">Browse File.. <input
-												type="file" name="files1" multiple />
-											</span>
+											<div class="row files fileupdt" id="files1">
+												<div class="col-md-12">
+													<label><b>Select Files to upload</b></label><br /> <span
+														class="btn btn-default btn-file">Browse File.. <input
+														type="file" name="files1" multiple />
+													</span>
 
 													<button type="button"
 														class="btn btn-warning btn-sm1 btncout"
@@ -1013,56 +1013,56 @@
 															class="hideData"><i class='fa fa-trash'></i></a></li>
 													</c:forEach>
 
-										</ul>
+												</ul>
 
-										<ul id="hideUl" class="fileList"></ul>
+												<ul id="hideUl" class="fileList"></ul>
 
 
+											</div>
+
+											<div style="clear: both;"></div>
+
+											<!-- Code added by Rakesh to upload multiple file     end -->
+
+
+
+
+
+											<!--Crew details input End-->
+
+											<div class="button-row d-flex mt-4">
+												<button class="btn btn-secondary js-btn-prev" type="button"
+													title="Prev">Prev</button>
+												<button class="btn btn-success ml-auto" type="button"
+													onclick="threatCheckDetails()" title="Send">Submit</button>
+											</div>
+										</div>
 									</div>
 
-									<div style="clear: both;"></div>
-
-									<!-- Code added by Rakesh to upload multiple file     end -->
 
 
 
-
-
-									<!--Crew details input End-->
-
-									<div class="button-row d-flex mt-4">
-										<button class="btn btn-secondary js-btn-prev" type="button"
-											title="Prev">Prev</button>
-										<button class="btn btn-success ml-auto" type="button"
-											onclick="threatCheckDetails()" title="Send">Submit</button>
-									</div>
-								</div>
+								</form>
 							</div>
-
-
-
-
-							</form>
 						</div>
 					</div>
+
+
+					<!--Tab Form End-->
+
+
+
 				</div>
-
-
-				<!--Tab Form End-->
-
-
-
+				<!-- Cont Box End -->
 			</div>
-			<!-- Cont Box End -->
+			<!-- Main Content End -->
+
+
+
 		</div>
-		<!-- Main Content End -->
-
-
-
+		<!--conent_wrapper End-->
 	</div>
-	<!--conent_wrapper End-->
-</div>
-<!--container-fluid End-->
+	<!--container-fluid End-->
 
 </div>
 <!--main body End-->
@@ -1528,19 +1528,10 @@ console.log(JSON.stringify(test) + " >>test");
 	for(i in imeiDataList){
 		$('#imei_tab').dataTable().fnAddData( [
 			imeiDataList[i].imei,
-			'<button type="button" onclick="dataTableUpdateImei(\''+imeiDataList[i].imei+'\',this)" class="btn btn-blue btn-sm1"><i class="fa fa-edit"></i></button>',
-			'<button type="button" onclick="dataTableDeleteImei(\''+imeiDataList[i].imei+'\',this)" class="btn btn-danger btn-sm1"><i class="fa fa-remove"></i></button>'] );
+			'<button type="button" onclick="dataTableUpdateImei(\''+imeiDataList[i].imei+'\',\''+imeiDataList[i].imeiId+'\',this)" class="btn btn-blue btn-sm1"><i class="fa fa-edit"></i></button>',
+			'<button type="button" onclick="dataTableDeleteImei(\''+imeiDataList[i].imei+'\',\''+imeiDataList[i].imeiId+'\',this)" class="btn btn-danger btn-sm1"><i class="fa fa-remove"></i></button>'] );
 	}
 	
-/* 	for(i in boatDataList){
-		var arr_boat=test.boatStrList[i];
-		//alert("show=="+JSON.stringify(arr_boat));
-	$('#boat_table').dataTable().fnAddData( [
-		boatDataList[i].boatName,boatDataList[i].regNum,boatDataList[i].ownerName,boatDataList[i].portReg,boatDataList[i].noOfCrew,boatDataList[i].docHeld,boatDataList[i].navEqpt,boatDataList[i].commEqpt,
-		boatDataList[i].lifeEqpt,boatDataList[i].boatlpc,boatDataList[i].boatetd,boatDataList[i].boatnpc,boatDataList[i].boateta,boatDataList[i].licenseFish,boatDataList[i].ownerContDts,boatDataList[i].boatColrcd,boatDataList[i].remarks,
-		 '<button type="button" onclick="dataTableUpdateBoat(\''+arr_boat+'\',\''+boatDataList[i].boatId+'\',this)" class="btn btn-blue btn-sm1"><i class="fa fa-edit"></i></button> <button type="button" onclick="dataTableDeleteBoat(\''+arr_boat[0]+'\',\''+boatDataList[i].boatId+'\',this)" class="btn btn-danger btn-sm1"><i class="fa fa-remove"></i></button>'] );
-	
-	} */
 	for(i in boatDataList){
 		//var arr_boat=test.boatStrList[i];
 		var arr_boat =[];
@@ -1591,14 +1582,45 @@ console.log(JSON.stringify(test) + " >>test");
 	}
 	
 	for(i in vesselDataList){
-		var arr_vessel=test.vesselStrList[i];
+		//var arr_vessel=test.vesselStrList[i];
 		// alert("show=="+JSON.stringify(arr_vessel));
+		var arr_vessel=[]
+		arr_vessel.push(vesselDataList[i].vesselName);
+		arr_vessel.push(vesselDataList[i].vesselTypeId);
+		arr_vessel.push(vesselDataList[i].intCallSign);
+		arr_vessel.push(vesselDataList[i].mmsi);
+		arr_vessel.push(vesselDataList[i].imoNo);
+		arr_vessel.push(vesselDataList[i].inmarsatNo);
+		arr_vessel.push(vesselDataList[i].cargo);
+		arr_vessel.push(vesselDataList[i].vessellpc);
+		arr_vessel.push(vesselDataList[i].vesseletd);
+		arr_vessel.push(vesselDataList[i].vesselnpc);
+		arr_vessel.push(vesselDataList[i].vesseleta);
+		arr_vessel.push(vesselDataList[i].totCrew);
+		arr_vessel.push(vesselDataList[i].flgPrtReg);
+		arr_vessel.push(vesselDataList[i].otherCommEqpt);
+		arr_vessel.push(vesselDataList[i].agent);
+		arr_vessel.push(vesselDataList[i].pans);
 		$('#vessel_table').dataTable().fnAddData( [
-			 arr_vessel[0],vesselDataList[i].vesselTypeName,arr_vessel[2],arr_vessel[3],arr_vessel[4],arr_vessel[5],arr_vessel[6],
-			 arr_vessel[7],arr_vessel[8],arr_vessel[9],arr_vessel[10],arr_vessel[11],arr_vessel[12],arr_vessel[13],arr_vessel[14],arr_vessel[15],
+			vesselDataList[i].vesselName,
+			vesselDataList[i].vesselTypeName,
+			vesselDataList[i].intCallSign,
+			vesselDataList[i].mmsi,
+			vesselDataList[i].imoNo,
+			vesselDataList[i].inmarsatNo,
+			vesselDataList[i].cargo,
+			vesselDataList[i].vessellpc,
+			vesselDataList[i].vesseletd,
+			vesselDataList[i].vesselnpc,
+			vesselDataList[i].vesseleta,
+			vesselDataList[i].totCrew,
+			vesselDataList[i].flgPrtReg,
+			vesselDataList[i].otherCommEqpt,
+			vesselDataList[i].agent,
+			vesselDataList[i].pans,
 		
 		 '<button type="button" onclick="dataTableUpdateVessel(\''+arr_vessel+'\',\''+vesselDataList[i].vesselId+'\',this)" class="btn btn-blue btn-sm1"><i class="fa fa-edit"></i></button> <button type="button" onclick="dataTableDeleteVessel(\''+arr_vessel[0]+'\',\''+vesselDataList[i].vesselId+'\',this)" class="btn btn-danger btn-sm1"><i class="fa fa-remove"></i></button>'] );	
-	} 
+	}
 	
 	
 	for(i in crewDataList){
@@ -1884,6 +1906,9 @@ function dataTableDeleteContact(value,text,text2,obj)
 
 //below for IMEI Number 3006
 
+var imeiId;
+var imeiDelList=[];
+var imeiDelChk=[];
 var imeiDtlsList=[];
 function fnClickAddImei() {
 		//$('#giffy').show();
@@ -1912,6 +1937,7 @@ function fnClickAddImei() {
 		else{
 		
 		var imeiNo=$('#imei').val();
+		imeiId==null || imeiId=='' ? imeiId='' : imeiId=imeiId+'-U';
 		if(imeiNo!=''){
 			 if(!(/^[a-zA-Z0-9]*$/.test(imeiNo))){
 					$.confirm({
@@ -1932,18 +1958,18 @@ function fnClickAddImei() {
 				$('#updateImeiButton').hide();
 				$('.imeiShd').show();
 				imUpd=0;
-				 $('#imei_tab').dataTable().fnAddData( [
+				 $('#imei_tab').dataTable().fnAddData([
 					 imeiNo,
-						'<button type="button" onclick="dataTableUpdateImei(\''+imeiNo+'\',this)" class="btn btn-blue btn-sm1"><i class="fa fa-edit"></i></button>',
-						'<button type="button" onclick="dataTableDeleteImei(\''+imeiNo+'\',this)" class="btn btn-danger btn-sm1"><i class="fa fa-remove"></i></button>'] );
+						'<button type="button" onclick="dataTableUpdateImei(\''+imeiNo+'\',\''+imeiId+'\',this)" class="btn btn-blue btn-sm1"><i class="fa fa-edit"></i></button>',
+						'<button type="button" onclick="dataTableDeleteImei(\''+imeiNo+'\',\''+imeiId+'\',this)" class="btn btn-danger btn-sm1"><i class="fa fa-remove"></i></button>'] );
 				 var dataImei = {};
 				 dataImei["imei"] = imeiNo;
+				 dataImei["imeiId"] = imeiId;
 				 imeiDtlsList.push(dataImei);
-				 
 				 $('#imei').val('');
-				 
-				 //alert("data=="+JSON.stringify(contactDtlsList));
-				 $("#sizeImei").text(imeiDtlsList.length+' records added');
+				 imeiId='';
+				//alert("data=="+JSON.stringify(imeiDtlsList));
+				 $("#sizeImei").text((imeiDtlsList.length)-(imeiDelChk.length)+' records added');
 				 $(".btImei").show();
 			}
 		}
@@ -1963,35 +1989,53 @@ function fnClickAddImei() {
 		}
 		}
 }
-function dataTableUpdateImei(value,obj)
-{
+
+function dataTableUpdateImei(value,text2,obj){
 	$('#addImeiButton').hide();
-		$('#updateImeiButton').show();
-		imUpd=1;
-		imeiDtlsList = $.grep(imeiDtlsList, function(el, idx) {return el.imei == value}, true)
-		//alert("data=="+JSON.stringify(contactDtlsList));
-		$('#imei').val(value);
-
-
-		//$('#contact_det').modal('toggle'); 
-		$('.imeiShd').hide();
-		$('#imei_tab').DataTable().row($(obj).parents('tr')).remove().draw(false);
+	$('#updateImeiButton').show();
+	imUpd=1;
+	if(text2!='' && text2!=null){ 	
+	var chnCrId=text2.split('-');	
+	imeiId=chnCrId[0];}
+		imeiDtlsList = $.grep(
+		imeiDtlsList,
+		 function(el, idx) {
+		 return el.imei == value;
+	 },
+	 true
+	 );
+	$('#imei').val(value);
+	
+	$('.imeiShd').hide();	
+	$('#imei_tab')
+	.DataTable()
+	.row($(obj).parents("tr"))
+	.remove()
+	.draw(false);
 }
 
-function dataTableDeleteImei(value,obj)
+function dataTableDeleteImei(value,text2,obj)
 {
-		imeiDtlsList = $.grep(imeiDtlsList, function(el, idx) {return el.imei == value}, true)
-		//alert("data=="+JSON.stringify(contactDtlsList));
-		$('#imei_tab').DataTable().row($(obj).parents('tr')).remove().draw(false);
-		$("#sizeImei").text(imeiDtlsList.length+' records added');
-		if(imeiDtlsList.length==0){
-			$(".btImei").hide();
-		}
+//alert("check=="+text2);
+	if(text2!='' && text2!=null){
+		var dataImeiDel = {};
+		var delrcd=text2.split('-');
+		dataImeiDel["imeiId"] = delrcd[0]+'-D';
+		imeiDelList.push(dataImeiDel);
+		imeiDelChk.push(dataImeiDel);
+	}
+	imeiDtlsList = $.grep(imeiDtlsList, function(el, idx) {return el.imei == value}, true);
+	//alert("data=="+JSON.stringify(imeiDtlsList));
+	$('#imei_tab').DataTable().row($(obj).parents('tr')).remove().draw(false);
+	Array.prototype.push.apply(imeiDtlsList,imeiDelList);
+	$("#sizeImei").text((imeiDtlsList.length)-(imeiDelChk.length)+' records added');
+	imeiDelList=[];
+	if((imeiDtlsList.length)-(imeiDelChk.length)==0){
+		$(".btImei").hide();
+	}
 } 
 
 //end 3006 IMEI Button Functionality END
-
-
 
 
 //below for boat details
@@ -2318,36 +2362,34 @@ console.log(JSON.stringify(arr_vessel)+">>>arr_vessel");
 	 pnsnm,//[15]
 	'<button type="button" onclick="dataTableUpdateVessel(\''+arr_vessel+'\',\''+vslId+'\',this)" class="btn btn-blue btn-sm1"><i class="fa fa-edit"></i></button> <button type="button" onclick="dataTableDeleteVessel(\''+arr_vessel[0]+'\',\''+vslId+'\',this)" class="btn btn-danger btn-sm1"><i class="fa fa-remove"></i></button>'] );
 	var dataVessel = {};
- 
- dataVessel["vesselName"] = arr_vessel[0];
- 					dataVessel["vesselTypeName"] = arr_vessel[1];
- 					dataVessel["intCallSign"] = arr_vessel[2];
- 					dataVessel["mmsi"] = arr_vessel[3];
-					dataVessel["imoNo"] = arr_vessel[4];
- 					dataVessel["inmarsatNo"] = arr_vessel[5];
-					dataVessel["cargo"] = arr_vessel[6];
-					dataVessel["vessellpc"] = arr_vessel[7];
-					dataVessel["vesseletd"] = arr_vessel[8]; 
-					dataVessel["vesselnpc"] = arr_vessel[9];
-					dataVessel["vesseleta"] = arr_vessel[10];
-					dataVessel["totCrew"] = arr_vessel[11];
-					dataVessel["flgPrtReg"] = arr_vessel[12];
-					dataVessel["otherCommEqpt"] = arr_vessel[13];
-					dataVessel["agent"] = arr_vessel[14];
-					dataVessel["pans"] = arr_vessel[15];
-					dataVessel["vesselId"] = vslId;
-				 	vesselDataList.push(dataVessel);
- 
- $('#vesselName, #intCallSign, #mmsi, #imoNo, #cargo, #vessellpc, #vesselnpc, #totCrew, #flgPrtReg').val('');
- $('#inmarsatNo, #otherCommEqpt, #agent').val('');
- $('#vesselTypeName, #pans').val('').trigger('change');
- $('#vesseletd, #vesseleta').val('');
- $('#vesseletd, #vesseleta').datepicker('setDate', null);
- vslId='';
-				 
-				 // alert("data=="+JSON.stringify(vesselDataList));
-				 $("#sizeVessel").text((vesselDataList.length)-(vesselDelChk.length)+' records added');
-				 $(".btVessel").show();
+	 
+		dataVessel["vesselName"] = arr_vessel[0];
+		dataVessel["vesselTypeName"] = arr_vessel[1];
+		dataVessel["intCallSign"] = arr_vessel[2];
+		dataVessel["mmsi"] = arr_vessel[3];
+		dataVessel["imoNo"] = arr_vessel[4];
+		dataVessel["inmarsatNo"] = arr_vessel[5];
+		dataVessel["cargo"] = arr_vessel[6];
+		dataVessel["vessellpc"] = arr_vessel[7];
+		dataVessel["vesseletd"] = arr_vessel[8]; 
+		dataVessel["vesselnpc"] = arr_vessel[9];
+		dataVessel["vesseleta"] = arr_vessel[10];
+		dataVessel["totCrew"] = arr_vessel[11];
+		dataVessel["flgPrtReg"] = arr_vessel[12];
+		dataVessel["otherCommEqpt"] = arr_vessel[13];
+		dataVessel["agent"] = arr_vessel[14];
+		dataVessel["pans"] = arr_vessel[15];
+		dataVessel["vesselId"] = vslId;
+ 		vesselDataList.push(dataVessel);
+
+$('#vesselName, #intCallSign, #mmsi, #imoNo, #cargo, #vessellpc, #vesselnpc, #totCrew, #flgPrtReg').val('');
+$('#inmarsatNo, #otherCommEqpt, #agent').val('');
+$('#vesselTypeName, #pans').val('').trigger('change');
+$('#vesseletd, #vesseleta').val('');
+$('#vesseletd, #vesseleta').datepicker('setDate', null);
+vslId='';
+$("#sizeVessel").text((vesselDataList.length)-(vesselDelChk.length)+' records added');
+$(".btVessel").show();
 
 }
 else{
